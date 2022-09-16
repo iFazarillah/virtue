@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -54,6 +55,18 @@ public class GeonameController {
         return new ResponseEntity<Map>(templateResponse.templateSukses(list), new HttpHeaders(), HttpStatus.OK);
     }
 
-
+//    @GetMapping("/suggestions")
+//    public ResponseEntity<Map> listSuggestions(
+//            @RequestParam() String q,
+//            @RequestParam(required = false)BigDecimal lat,
+//            @RequestParam(required = false) BigDecimal longt,
+//            @RequestParam() Integer p,
+//            @RequestParam() Integer s){
+//        Map map = new HashMap();
+//        Pageable show_data = PageRequest.of(p, s, Sort.by("name").ascending());
+//        if ( lat != null && longt != null){
+//            list =
+//        }
+//    }
 
 }
